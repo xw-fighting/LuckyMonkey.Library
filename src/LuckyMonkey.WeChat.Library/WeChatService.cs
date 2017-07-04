@@ -38,16 +38,7 @@ namespace LuckyMonkey.WeChat.Library
 
         private string ResopnseMsg()
         {
-            var msgType = Request.Query["MsgType"];
-
-            //switch (msgType)
-            //{
-            //    case "event":
-            //        HandlerFactory
-            //    default:
-            //        break;
-            //}
-            return msgType;
+            return string.Empty;
         }
 
         private bool VerifyGateway()
