@@ -7,7 +7,7 @@ namespace LuckyMonkey.Utility.Library.EncryptionRelated
     /// <summary>
     /// 算法加密有关的类级【SHA1、MD5】
     /// </summary>
-    public class EncryptionAlgorithm
+    public class EncryptionUtility
     {
         /// <summary>
         /// SHA1加密方法

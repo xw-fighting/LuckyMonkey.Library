@@ -9,7 +9,7 @@ namespace LuckyMonkey.Utility.LibraryTest.EncryptionRelated
     /// <summary>
     /// 算法加密的测试方法
     /// </summary>
-    public class EncryptionAlgorithmTest
+    public class EncryptionUtilityTest
     {
         private const string  testInput = "welcome to LuckyMonkey's program";
         /// <summary>
@@ -18,7 +18,7 @@ namespace LuckyMonkey.Utility.LibraryTest.EncryptionRelated
         [Fact]
         public void Sha1EncryptTest()
         {
-            var result = EncryptionAlgorithm.Sha1Encrypt(testInput);
+            var result = EncryptionUtility.Sha1Encrypt(testInput);
             Assert.True(result.Equals("b7a90b0f379ed3dad6d7699b80ad7ace517e130c"));
         }
 
@@ -28,7 +28,7 @@ namespace LuckyMonkey.Utility.LibraryTest.EncryptionRelated
         [Fact]
         public void Md5EncryptToStr16Test()
         {
-            var result = EncryptionAlgorithm.Md5EncryptToStr16(testInput).ToLower() ;
+            var result = EncryptionUtility.Md5EncryptToStr16(testInput).ToLower() ;
             Assert.True(result.Equals("d361a567f1ea411d"));
         }
 
@@ -38,7 +38,7 @@ namespace LuckyMonkey.Utility.LibraryTest.EncryptionRelated
         [Fact]
         public void Md5EncryptToStr32()
         {
-            var result = EncryptionAlgorithm.Md5EncryptToStr32(testInput);
+            var result = EncryptionUtility.Md5EncryptToStr32(testInput);
             Assert.True(result.Equals("820fae05d361a567f1ea411d24c4bf1f"));
         }
 

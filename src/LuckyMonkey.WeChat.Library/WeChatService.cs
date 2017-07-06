@@ -38,6 +38,7 @@ namespace LuckyMonkey.WeChat.Library
 
         private string ResopnseMsg()
         {
+            //var requestXml = 
             return string.Empty;
         }
 
@@ -62,7 +63,7 @@ namespace LuckyMonkey.WeChat.Library
                 input += l;
             });
             //对input进行SHA1加密
-            var newSingnature = EncryptionAlgorithm.Sha1Encrypt(input);
+            var newSingnature = EncryptionUtility.Sha1Encrypt(input);
             return newSingnature.Equals(singnature);
         }
     }
