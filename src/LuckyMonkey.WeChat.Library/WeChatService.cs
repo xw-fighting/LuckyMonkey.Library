@@ -1,4 +1,6 @@
 ﻿using LuckyMonkey.Utility.Library.EncryptionRelated;
+using LuckyMonkey.Utility.Library.HttpRelated;
+using LuckyMonkey.Utility.Library.XmlRelated;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -38,7 +40,10 @@ namespace LuckyMonkey.WeChat.Library
 
         private string ResopnseMsg()
         {
-            //var requestXml = 
+            //读取出报文中的xml格式数据
+            var requestXml = HttpRequestUtility.ReadRequestContent(Request);
+            //将xml字符串序列化为对象
+            
             return string.Empty;
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace LuckyMonkey.Utility.Library.XmlRelated
@@ -17,19 +18,19 @@ namespace LuckyMonkey.Utility.Library.XmlRelated
         /// <param name="xml"></param>
         /// <param name="encoding"></param>
         /// <returns></returns>
-        public static  T XmlToObject<T>(string xml, Encoding encoding = null)
+        public static T XmlToObject<T>(string xml, Encoding encoding = null)
         {
             try
             {
                 var mySerializer = new XmlSerializer(typeof(T));
-                if(encoding == null)
+                if (encoding == null)
                 {
                     encoding = Encoding.UTF8;
                 }
                 var xmlBuffer = encoding.GetBytes(xml);
                 using (var ms = new MemoryStream(xmlBuffer))
                 {
-                    using(var streamReader = new StreamReader(ms, encoding))
+                    using (var streamReader = new StreamReader(ms, encoding))
                     {
                         return (T)mySerializer.Deserialize(streamReader);
                     }
@@ -49,12 +50,12 @@ namespace LuckyMonkey.Utility.Library.XmlRelated
         /// <param name="obj"></param>
         /// <param name="encoding"></param>
         /// <returns></returns>
-        public static string ObjectToXml<T> (T obj,Encoding encoding = null )
+        public static string ObjectToXml<T>(T obj, Encoding encoding = null)
         {
             try
             {
                 if (obj == null)
-                    throw new  ArgumentNullException("obj");
+                    throw new ArgumentNullException("obj");
                 var mySerializer = new XmlSerializer(obj.GetType());
                 using (var ms = new MemoryStream())
                 {
@@ -64,13 +65,33 @@ namespace LuckyMonkey.Utility.Library.XmlRelated
                     string str = sr.ReadToEnd();
                     return str;
                 }
-                
+
             }
             catch (Exception)
             {
 
                 throw;
             }
+        }
+
+
+        /// <summary>
+        /// 读取xml内容中指定xpath中的元素值
+        /// </summary>
+        /// <param name="xPath">xml中元素值</param>
+        /// <param name="inputXml">xml输入字符串</param>
+        /// <returns></returns>
+        public static string ReadXmlNodeValue(string xPath, string inputXml)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(inputXml);
+            var node = doc.SelectSingleNode(xPath);
+            if (node == null)
+                return string.Empty;
+            XmlCDataSection section = node.FirstChild as XmlCDataSection;
+            if (section == null)
+                return string.Empty;
+            return section.Value;
         }
     }
 }
