@@ -16,16 +16,7 @@ namespace LuckyMonkey.WeChat.Library
         {
             Request = request;
         }
-
-        public void MvcGet(CheckSignatureParam param)
-        {
-
-        }
-
-        public void MvcPost()
-        {
-
-        }
+               
 
         public string HandlerResponse()
         {
