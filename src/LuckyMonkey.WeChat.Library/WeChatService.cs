@@ -1,10 +1,11 @@
-﻿using LuckyMonkey.Utility.Library.EncryptionRelated;
-using LuckyMonkey.Utility.Library.HttpRelated;
-using LuckyMonkey.Utility.Library.XmlRelated;
+﻿using LuckyMonkey.Utility.Library;
+using LuckyMonkey.WeChat.Library.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LuckyMonkey.WeChat.Library
 {
@@ -16,7 +17,12 @@ namespace LuckyMonkey.WeChat.Library
             Request = request;
         }
 
-        public void MvcResponse()
+        public void MvcGet(CheckSignatureParam param)
+        {
+
+        }
+
+        public void MvcPost()
         {
 
         }
@@ -25,7 +31,7 @@ namespace LuckyMonkey.WeChat.Library
         {
             var method = Request.Method.ToUpper();
             if (string.IsNullOrEmpty(method))
-                return string.Empty ;
+                return string.Empty;
             if (method.Equals("GET"))
             {
                 if (VerifyGateway())
@@ -33,25 +39,28 @@ namespace LuckyMonkey.WeChat.Library
             }
             else if (method.Equals("POST"))
             {
-                return ResopnseMsg();
+                return  ResopnseMsg();
             }
             return string.Empty;
         }
 
-        private string ResopnseMsg()
+        private  string ResopnseMsg()
         {
             //读取出报文中的xml格式数据
             var requestXml = HttpRequestUtility.ReadRequestContent(Request);
-            //将xml字符串序列化为对象
-            
-            return string.Empty;
+            //创建一个处理器对请求进行处理
+            var handler = HandlerFactory.CreateHandler(requestXml);
+            if (handler == null)
+                return string.Empty;
+            //通过请求的xml获取到相应的处理器进行处理请求
+            return handler.HandlerRequest();
         }
 
         private bool VerifyGateway()
         {
-            var singnature = Request.Query["singnature"];
-            var timestamp = Request.Query["Timestamp"];
-            var nonce = Request.Query["Nonce"];
+            var singnature = Request.Query["signature"].FirstOrDefault();
+            var timestamp = Request.Query["timestamp"];
+            var nonce = Request.Query["nonce"];
             var token = "xiaowei";
             //加入集合，进行字典排序
             var list = new List<string>()

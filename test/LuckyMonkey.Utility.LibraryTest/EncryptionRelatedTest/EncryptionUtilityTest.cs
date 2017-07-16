@@ -1,4 +1,4 @@
-﻿using LuckyMonkey.Utility.Library.EncryptionRelated;
+﻿using LuckyMonkey.Utility.Library;
 using System;
 using System.Collections.Generic;
 using System.Text;

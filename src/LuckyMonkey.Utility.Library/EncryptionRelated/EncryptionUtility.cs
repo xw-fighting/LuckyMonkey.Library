@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace LuckyMonkey.Utility.Library.EncryptionRelated
+namespace LuckyMonkey.Utility.Library
 {
     /// <summary>
     /// 算法加密有关的类级【SHA1、MD5】

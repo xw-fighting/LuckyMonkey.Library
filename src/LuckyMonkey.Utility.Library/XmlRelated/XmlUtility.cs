@@ -4,7 +4,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace LuckyMonkey.Utility.Library.XmlRelated
+namespace LuckyMonkey.Utility.Library
 {
     /// <summary>
     /// Xml工具类【将xml格式的数据序列化为对象，或将对象反序列化为xml】

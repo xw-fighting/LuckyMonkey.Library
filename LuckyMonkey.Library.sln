@@ -1,27 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B974AA2E-6790-4C82-80C5-0FF20FC1F783}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdpartService", "ThirdpartService", "{8A1A68EE-D635-4FB7-9016-EF6860C40644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyMonkey.WeChat.Library", "src\LuckyMonkey.WeChat.Library\LuckyMonkey.WeChat.Library.csproj", "{ECC7C1FC-38EA-44FB-B4A6-A6B8CA297DC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyMonkey.WeChat.Library", "src\LuckyMonkey.WeChat.Library\LuckyMonkey.WeChat.Library.csproj", "{ECC7C1FC-38EA-44FB-B4A6-A6B8CA297DC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyMonkey.Alipay.Library", "src\LuckyMonkey.Alipay.Library\LuckyMonkey.Alipay.Library.csproj", "{DBB66B0F-95F6-47EA-B3E5-6A6C95BFFEE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyMonkey.Alipay.Library", "src\LuckyMonkey.Alipay.Library\LuckyMonkey.Alipay.Library.csproj", "{DBB66B0F-95F6-47EA-B3E5-6A6C95BFFEE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCoreExtension", "AspNetCoreExtension", "{296FC5A7-DF96-4722-9118-B0AF9A14C6BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryHelper", "LibraryHelper", "{A80B67F6-395B-46F7-A525-3EFC77842BA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyMonkey.Utility.Library", "src\LuckyMonkey.Utility.Library\LuckyMonkey.Utility.Library.csproj", "{45A5B0AB-380B-4892-824E-A52599416C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyMonkey.Utility.Library", "src\LuckyMonkey.Utility.Library\LuckyMonkey.Utility.Library.csproj", "{45A5B0AB-380B-4892-824E-A52599416C07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EDB63389-6856-4122-85B4-93DB1EDE77C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryHelperTest", "LibraryHelperTest", "{B75EE486-A96F-4A9D-B79E-D73C6C569F8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyMonkey.Utility.LibraryTest", "test\LuckyMonkey.Utility.LibraryTest\LuckyMonkey.Utility.LibraryTest.csproj", "{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyMonkey.Utility.LibraryTest", "test\LuckyMonkey.Utility.LibraryTest\LuckyMonkey.Utility.LibraryTest.csproj", "{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyMonkey.AspNetCoreExtension.Library", "src\LuckyMonkey.AspNetCoreExtension.Library\LuckyMonkey.AspNetCoreExtension.Library.csproj", "{BF4C9075-68EF-477F-A5F3-1D916F07A34F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8EF72500-E16D-4D6D-AA48-3446B46172B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyMonkey.WechatWeb", "src\LuckyMonkey.WechatWeb\LuckyMonkey.WechatWeb.csproj", "{C84CA852-4827-4051-8F75-63B7C37AE8CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4C9075-68EF-477F-A5F3-1D916F07A34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4C9075-68EF-477F-A5F3-1D916F07A34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4C9075-68EF-477F-A5F3-1D916F07A34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4C9075-68EF-477F-A5F3-1D916F07A34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84CA852-4827-4051-8F75-63B7C37AE8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84CA852-4827-4051-8F75-63B7C37AE8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84CA852-4827-4051-8F75-63B7C37AE8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84CA852-4827-4051-8F75-63B7C37AE8CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +72,8 @@ Global
 		{45A5B0AB-380B-4892-824E-A52599416C07} = {A80B67F6-395B-46F7-A525-3EFC77842BA0}
 		{B75EE486-A96F-4A9D-B79E-D73C6C569F8D} = {EDB63389-6856-4122-85B4-93DB1EDE77C1}
 		{CDB2FC0A-9A8C-4B38-A498-17F9E0FF10AD} = {B75EE486-A96F-4A9D-B79E-D73C6C569F8D}
+		{BF4C9075-68EF-477F-A5F3-1D916F07A34F} = {296FC5A7-DF96-4722-9118-B0AF9A14C6BF}
+		{8EF72500-E16D-4D6D-AA48-3446B46172B1} = {B974AA2E-6790-4C82-80C5-0FF20FC1F783}
+		{C84CA852-4827-4051-8F75-63B7C37AE8CC} = {8EF72500-E16D-4D6D-AA48-3446B46172B1}
 	EndGlobalSection
 EndGlobal
